@@ -1,8 +1,6 @@
 # CheapsharkGameDeals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cheapshark_game_deals`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Cheapshark Game Deals gem! This project was developed for a project for Flatiron School coding bootcamp. It allows a user to access updated game deals from the Cheapshark API all through a CLI.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the './bin/cheapshark-game-deals' file and your off the the races! The app prompts the user through the rest of the process.
 
 ## Development
 

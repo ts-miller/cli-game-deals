@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "cheapshark_game_deals"
   spec.version       = CheapsharkGameDeals::VERSION
   spec.authors       = ["ts-miller"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.email         = ["tylerstephen11@gmail.com"]
 
   spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
