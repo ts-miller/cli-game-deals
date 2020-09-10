@@ -1,5 +1,3 @@
-require_relative 'lib/cheapshark_game_deals/version'
-
 Gem::Specification.new do |spec|
   spec.name          = "cheapshark_game_deals"
   spec.version       = CheapsharkGameDeals::VERSION

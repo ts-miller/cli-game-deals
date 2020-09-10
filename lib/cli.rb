@@ -10,11 +10,11 @@ class Cli
 
     def welcome_prompt
         line
-        puts "_________                            ________            ______       "
-        puts "__  ____/_____ _______ ________      ___  __ \\__________ ___  /_______"
-        puts "_  / __ _  __ `/_  __ `__ \\  _ \\     __  / / /  _ \\  __ `/_  /__  ___/"
-        puts "/ /_/ / / /_/ /_  / / / / /  __/     _  /_/ //  __/ /_/ /_  / _(__  ) "
-        puts "\\____/  \\__,_/ /_/ /_/ /_/\\___/      /_____/ \\___/\\__,_/ /_/  /____/  "
+        puts " _________                            ________            ______       "
+        puts " __  ____/_____ _______ ________      ___  __ \\__________ ___  /_______"
+        puts " _  / __ _  __ `/_  __ `__ \\  _ \\     __  / / /  _ \\  __ `/_  /__  ___/"
+        puts " / /_/ / / /_/ /_  / / / / /  __/     _  /_/ //  __/ /_/ /_  / _(__  ) "
+        puts " \\____/  \\__,_/ /_/ /_/ /_/\\___/      /_____/ \\___/\\__,_/ /_/  /____/  "
         puts
         line
         puts "Welcome to Cheapshark Game Deals!"
@@ -42,7 +42,7 @@ class Cli
             display_deal_info(input.to_i-1)
             line
             puts "Copy URL into browser for purchase page."
-            puts "Type 'back' to return to deal list."
+            puts "Type 'deals' to return to deal list."
             puts "Type 'exit' to leave."
             line
             input = gets.strip
@@ -53,7 +53,7 @@ class Cli
         elsif input == "next"
             puts "Loading more deals..."
             next_page
-        elsif input == 'previous'
+        elsif input == 'back'
             puts "Going back yo..."
             previous_page
         else
@@ -89,7 +89,7 @@ class Cli
         puts "Deals are ranked by 'Deal Rating' from highest to lowest."
         puts "Enter the number of the deal to get more info."
         puts "Type 'next' to go to the next page."
-        puts "Type 'previous' to go to the previous page"
+        puts "Type 'back' to go to the previous page"
         puts "Type 'exit' to leave."
         line
     end
@@ -105,7 +105,7 @@ class Cli
 
     def second_menu_layer(input)
         case input
-        when 'back'
+        when 'deals'
             menu
         when 'exit'
             goodbye
