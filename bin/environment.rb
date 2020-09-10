@@ -3,6 +3,7 @@ require 'open-uri'
 require 'json'
 require 'colorize'
 require 'pry'
+require 'io/console'
 
 require './lib/cli'
 require './lib/api'

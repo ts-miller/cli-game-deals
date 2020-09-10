@@ -19,9 +19,9 @@ class Cli
         line
         puts "Welcome to Cheapshark Game Deals!"
         puts "For more deals go to cheapshark.com"
-        puts "Press ENTER to get deals!"
+        puts "Press 'any key' to get deals!"
         line
-        STDIN.gets
+        STDIN.getch
         puts "Fetchin' dem deals..."
     end
 
