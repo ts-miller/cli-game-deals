@@ -2,7 +2,7 @@ class Cli
 
     def call
         welcome_prompt
-        create_deals
+        Api.get_deals
         menu
         goodbye
         exit
@@ -27,13 +27,6 @@ class Cli
 
     def line
         puts "----------------------------------------------------------------------"
-    end
-
-    def create_deals
-        deals = GetDeals.parse
-        deals.each do |deal|
-            Deal.new(deal)
-        end
     end
 
     def menu
@@ -67,8 +60,8 @@ class Cli
     end
 
     def display_deals
-        Deal.all.each.with_index do |deal, index|
-            puts "#{index + 1}. #{deal.title} --$#{colorize(deal)} // Reg:$#{deal.normalPrice}"
+        Deal.all.each.with_index(1) do |deal, index|
+            puts "#{index}. #{deal.title} --$#{colorize(deal)} // Reg:$#{deal.normalPrice}"
         end
     end
 
@@ -86,7 +79,7 @@ class Cli
 
     def menu_key
         line
-        puts "Page #{GetDeals.page + 1}"
+        puts "Page #{Api.page + 1}"
         line
         print ">85% off".red, " // ", ">75% off".magenta, " // ", ">65% off".blue
         puts
@@ -122,15 +115,15 @@ class Cli
     end
 
     def next_page
-        GetDeals.add_page
+        Api.add_page
         Deal.all.clear
         create_deals
         menu
     end
 
     def previous_page
-        if GetDeals.page > 0
-            GetDeals.subtract_page
+        if Api.page > 0
+            Api.subtract_page
         end
         Deal.all.clear
         create_deals

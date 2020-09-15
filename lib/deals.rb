@@ -7,7 +7,7 @@ class Deal
     @@all = []
     
     def initialize(deal)
-        deal.each {|key, value| self.send(("#{key}="), value) }
+        deal.each{ |key, value| self.send("#{key}=", value) }
         @@all << self
     end
 
