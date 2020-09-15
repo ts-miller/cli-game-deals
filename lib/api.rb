@@ -2,13 +2,13 @@ class GetDeals
 
     @@page = 0
     
-  def get_deals
+  def self.get_deals
     uri = URI.parse(GetDeals.url)
     response = Net::HTTP.get_response(uri)
     response.body
   end
 
-  def parse
+  def self.parse
     hash = JSON.parse(self.get_deals).collect do |deal|
         deal.transform_keys(&:to_sym)
     end

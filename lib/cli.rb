@@ -25,8 +25,12 @@ class Cli
         puts "Fetchin' dem deals..."
     end
 
+    def line
+        puts "----------------------------------------------------------------------"
+    end
+
     def create_deals
-        deals = GetDeals.new.parse
+        deals = GetDeals.parse
         deals.each do |deal|
             Deal.new(deal)
         end
@@ -131,10 +135,6 @@ class Cli
         Deal.all.clear
         create_deals
         menu
-    end
-
-    def line
-        puts "----------------------------------------------------------------------"
     end
     
     def goodbye
